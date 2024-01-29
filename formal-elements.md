@@ -1,4 +1,5 @@
 <div dir='rtl' lang='he'>
+</div>
 
 # Avatar - Unleash The Power
 
@@ -12,10 +13,11 @@
 
 המשחק מיועד למחשב ולקונסולות משחקים כמו אקסבוקס או פלייסטיישן
 
+## תמונת המשחק
 ![Game Cover](https://i.ibb.co/3fCsDpY/image.png)
 Game cover created using Bing Image Creator:
-![Image creator prompt](https://i.ibb.co/bdtQBSC/image.png) 
----
+![Image creator prompt](https://i.ibb.co/bdtQBSC/image.png)
+
 
 
 ## רכיבים רשמיים
