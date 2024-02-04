@@ -144,6 +144,6 @@ Game cover created using Bing Image Creator:
 
 
 **Emphasized Uniqueness:**
--    *Points of Differentiation:*
+- *Points of Differentiation:*
    - Avatar: Shadows Of Harmony introduces new story never told before and a new enemy.
    - Plot twists and player choices change the plot.
