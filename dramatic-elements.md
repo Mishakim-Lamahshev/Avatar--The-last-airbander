@@ -1,4 +1,4 @@
-#### Dramatic elements for the game: Avatar - Shadows Of Harmony
+## Dramatic elements for the game: Avatar - Shadows Of Harmony
 
 ### Challenge:
 
@@ -10,11 +10,6 @@
    - **Easy:** Reduced enemy difficulty, more health, and accessible abilities.
    - **Medium:** Standard enemy difficulty, moderate health, and balanced abilities.
    - **Hard:** Increased enemy difficulty, less health, and challenging abilities.
-
-3. **Dynamic Difficulty Adjustment:**
-   - Player performance analytics.
-   - Assessing completion time, accuracy, and success rates.
-   - Adjusting enemy strength, quantity, and environmental challenges dynamically.
 
 ### Flow:
 
