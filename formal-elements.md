@@ -1,88 +1,149 @@
-<div dir='rtl' lang='he'>
+# Avatar: Shadows Of Harmony
 
-# Avatar - Unleash The Power
+**"Unleash the Elements, Confront the Shadows, and Shape the Fate of a World in Peril!"**
 
-**Avatar - Unleash The Power: Unleash the power to restore balance and harmony.**
+## The Essence of the Game
 
-## מהות המשחק
-השחקן מגלם את אנג - כשף האוויר האחרון, עליו להתמקצע ולשלוט בכל ארבעת האלמנטים כדי להביס את אומת האש. השחקן מבצע משימות שונות במקומות שונים במפה שמזכות אותו ב״נקודות שליטה״ המשפרות אלמנט מסוים. במהלך המשימות השחקן גם מחזק את הקשרים שלו עם הדמויות האחרות. במטרה סופית, בשיתוף פעולה עם הדמויות האחרות, להביס את אומת האש ולהחזיר האיזון לעולם.
+Embark on an epic journey as Avatar Aang to confront a new adversary, the Shadow Clan, threatening to plunge the world into darkness. Master the bending arts, make impactful choices, and unveil the mysteries that lie within the shadows.
 
-משחק הרפתקאות המתאר את דרכו של אנג - כשף האוויר האחרון, עליו להתמקצע ולשלוט בכל ארבעת האלמנטים כדי להביס את אומת האש. במהלך המשחק על אנג לבצע משימות שונות, לשפר את יכולותיו ולהגן על חבריו. במהלך המשימות על אנג לחזק את הקשרים שלו עם הדמויות האחרות. במטרה סופית, בשיתוף פעולה איתם להביס את אומת האש ולהחזיר האיזון לעולם.
-
-
-המשחק מיועד למחשב ולקונסולות משחקים כמו אקסבוקס או פלייסטיישן
+*Platform:* The game is intended for normal computers and gaming consoles.
 
 ![Game Cover](https://i.ibb.co/3fCsDpY/image.png)
 Game cover created using Bing Image Creator:
-![Image creator prompt](https://i.ibb.co/bdtQBSC/image.png) 
----
-
-
-## רכיבים רשמיים
-
-
-### 1. שחקנים
-
-* המשחק מיועד לכל הגילאים, ישנם רמות קושי שונות, יתאים יותר לאנשים שצפו בסדרה ובסרט של אווטאר.
-* המשחק מיועד לשחקן אחד
-
-### 2. יעדים
-
-* היעד הסופי של המשחק הוא להביס את אומת האש, לאורך הדרך ישנם יעדים נוספים כמו שיפור השליטה באלמנטים השונים ועזרה לדמויות אחרות במשימות שונות.
-* המשחק יהיה בסגנון סיפורי, בין המשימות יהיה סרטון המחבר ומקשר בין המשימות והשלבים השונים במשחק.
-* לאורך המשחק על השחקן לקבל החלטות המשפיעות על הסיפור ועל משימות ההמשך.
-
-
-### 3. תהליכים
-
-* תהליך ההתחלה של המשחק - סרטון המראה איך לפני שנים רבות ארבעת האומות חיו בהרמוניה עד שאומת האש החליטה לתקוף. רק האווטאר השולט בכל ארבעת האלמנטים יכול היה לעצור אותה, אבל כשהעולם היה זקוק לו יותר מאי פעם, הוא נעלם. 100 שנים חלפו ועכשיו אתם מצאתם אותו! כעת עליכם ללמד אותו לשלוט בכל ארבעת האלמנטים בכדי להביס את אומת האש..
-*	תהליך הליבה של המשחק – סרטוני מעבר ומשימות בשלבים השונים לאורך הדרך..
-*	תהליך הסיום של המשחק – סיום כל השלבים והבסת אומת האש בשלב האחרון..
-
-### 4. חוקים
-
-* עליך לעבור את המשימות לפי הסדר
-* יאם נגמרו לשחקן הפסילות המותרות (כשלונות במשימות) הוא מפסיד במשחק ועליו להתחיל מהתחלה.
-
-
-### 5. משאבים
-* המשאב העיקרי במשחק הוא כמות הפסילות המותרות המוצג כל פעם בסיום/כשלון במשימה. מתחילים עם 3 ולאורך המשחק בהתאם להחלטות שהשחקן מקבל ניתן לקבל יותר, לזכות בהם במשימות או לקנות בכסף שהשחקן הרוויח מהמשימות.
-* משאב משני הוא כסף אותו השחקן מקבל ממשימות.
-
-
-### 6. עימותים
-
-לשחקן יהיו התלבטויות לאורך כל המשחק וישפיע באופן ישיר על המשך הסיפור, הוא יצטרך לבחור האם לעזור לדמויות או לוותר, איך לענות לשאלות שהוא נשאל.
-
-
-### 7. גבולות
-
-המשחק יהיה בסגנון סיפורי, בין המשימות יהיה סרטון המחבר ומקשר בין המשימות והשלבים השונים במשחק, המשימות יהיו במפה אחת סגורה
- 
-
-### 8. תוצאות
-
-* נצחון - מצליחים בכל המשימות ומצליחים להביס את אומת האש!
-* הפסד - לאחר ניצול כל הפסילות המותרות השחקן מפסיד במשחק ונפסל.
+![Image creator prompt](https://i.ibb.co/bdtQBSC/image.png)
 
 ---
 
-## סקר שוק
+## Formal Components
 
-לאחר חיפוש תחת הביטויים: "avatar game", "Avatar last airbender game", "avatar aang game"
-שלושת המשחקים הכי דומים:
+### 1. Actors
 
-#### Avatar The Last Airbender Quest for Balance: [Link](https://store.steampowered.com/app/1620030/Avatar_The_Last_Airbender__Quest_for_Balance/)
-![screenshot](https://i.ibb.co/mbgh8nN/image.png)
+* **Target Players:** Adventure and RPG enthusiasts of various ages, skill levels, and interests.
+* **Number of Players:** Single-player.
+* **Interaction:** Player engages in a cooperative experience with NPCs, facing challenges and making pivotal decisions.
 
-#### Avatar - The Last Airbender: [Link](https://arcadespot.com/game/avatar-the-last-airbender/)
-![game screenshot](https://i.ibb.co/3p3Y8L0/image.png)
+### 2. Objectives
 
-#### Element Master 3D: [Link](https://apps.apple.com/il/app/element-master-3d/id1556517330?l=he)
-![screenshot](https://i.ibb.co/0sq2R7h/Collage-Jan-10-2024.jpg)
+* **Goals:** Uncover the secrets of the Shadow Clan, master bending arts, and shape the narrative through meaningful choices.
+* **Informing the Player:** Goals are communicated through in-game dialogues, quest descriptions, and dynamic story progression.
 
-הייחוד במשחק זה היא בדרך בה המשחק מעביר את הסיפור של אנג ואת דרך התפתחותו עד להבסת אומת האש.
-הרכיב הבולט ביותר במשחק מבין הרכיבים הרשמיים הוא התהליכים, התהליכים מייחדים את החוויה שהמשחק מנסה להעביר, וגורמים לשחקן להתחבר לדמות ולסיפור לאורך המשחק.
+### 3. Processes
+
+* **Game Start:**
+  - Player selects difficulty level and initiates the game.
+  - Introduction cutscene sets the stage for the narrative.
+  - Controls: Keyboard/mouse or gaming controller.
+
+* **Core Gameplay:**
+  - Exploration, bending combat, and decision-making.
+  - Controls: Movement (WASD), Bending (Hotkeys/Buttons), Dialogue Choices (Mouse/Buttons).
+
+* **Game Ending:**
+  - Culmination in a series of intense battles against the Shadow Clan.
+  - Successful completion leads to multiple endings based on player choices.
+  - Controls: Combat mechanics, decision-making.
+
+* **Learning Processes:**
+  - Tutorials during the initial stages.
+  - In-game tooltips and hints.
+  - Gradual introduction of new mechanics and challenges.
+
+### 4. Laws
+
+* **Game Rules:**
+  - Limitations on bending abilities based on skill levels.
+  - Consequences for certain choices affecting story progression.
+  - Rules learned through in-game tutorials and tooltips.
+
+* **Result Determination:**
+  - Combat outcomes based on player skill and strategic choices.
+  - Story developments influenced by decisions.
+
+* **Learning Rules:**
+  - Tutorials during the early stages.
+  - Encountering challenges that enforce specific rules.
+
+### 5. Resources
+
+* **Game Resources:**
+  - Elemental bending powers.
+  - Knowledge gained from interactions with NPCs.
+  - Rare artifacts and special abilities.
+  
+* **Benefits:**
+  - Enhanced bending capabilities.
+  - Insight into the Shadow Clan's weaknesses.
+  
+* **Resource Acquisition:**
+  - Completing quests.
+  - Exploration and discovery.
+  - Successful combat against foes.
+
+* **Resource Rarity:**
+  - Limited availability of artifacts and rare bending techniques.
+
+* **Player Information:**
+  - Resource indicators on the HUD.
+
+### 6. Conflicts
+
+* **Main Conflicts:**
+  - **Player vs. System:** Overcoming environmental obstacles and battling foes.
+  - **Player vs. Self:** Moral dilemmas influencing the narrative.
+
+### 7. Limits
+
+* **Game World:**
+  - Closed world with defined regions, scenes will show movment from map to map.
+  - Varied landscapes reflecting the bending elements.
+  
+* **Representation:**
+  - 3D game environment with smooth transitions between areas.
+
+* **Showing Limits:**
+  - Visible borders or barriers.
+  - Narrative cues guiding exploration.
+
+* **Map Design Principles:**
+  - Meaningful locations tied to the narrative.
+  - Smooth navigation to maintain interest.
+  - Clear orientation through visual cues.
+
+### 8. Results
+
+* **Outcomes:**
+  - Multiple endings based on choices made.
+  - Varied consequences depending on player actions.
+
+* **Luck vs. Talent:**
+  - Outcome influenced by player skill and strategic decisions.
+
+* **Game Dynamics:**
+  - Combination of cooperative and complex elements.
+
+---
+
+## Market Survey
+
+**Search Terms:**
+- Avatar Shadows Of Harmony game
+- Avatar game
+- Avatar aang game
+
+**Similar Games:**
+
+1. **[Avatar The Last Airbender: Quest for Balance](https://store.steampowered.com/app/1620030/Avatar_The_Last_Airbender__Quest_for_Balance/)**
+   ![screenshot](https://i.ibb.co/mbgh8nN/image.png)
 
 
-</div>
+2. **[Avatar - The Last Airbender](https://arcadespot.com/game/avatar-the-last-airbender/)**
+   ![game screenshot](https://i.ibb.co/3p3Y8L0/image.png)
+
+3. **[Element Master 3D](https://apps.apple.com/il/app/element-master-3d/id1556517330?l=he)**
+   ![screenshot](https://i.ibb.co/0sq2R7h/Collage-Jan-10-2024.jpg)
+
+
+**Emphasized Uniqueness:**
+-    *Points of Differentiation:*
+   - Avatar: Shadows Of Harmony introduces new story never told before and a new enemy.
+   - Plot twists and player choices change the plot.
