@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/OpeningScene.unity
+    guid: b0b35c48e5ea4824fbadd30e943cf644
+  - enabled: 1
     path: Assets/Scenes/AangVsZuko.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -14,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/VictoryScene.unity
     guid: d250b90f0923a414491d552074fe0469
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 546fca2306907dc4a85c324bd4e06827
   m_configObjects: {}
