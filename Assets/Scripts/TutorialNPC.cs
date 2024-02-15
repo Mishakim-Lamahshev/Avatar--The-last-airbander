@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.InputSystem;
 
 public class TutorialNPC : TargetMover
 {
@@ -16,12 +17,27 @@ public class TutorialNPC : TargetMover
     public string[] ArenaExplanations;
     public string[] TrainingCenterExplanations;
 
+    // Recieve the input key for the player to press to continue the explanation
+    // and the text to display for the explanation
+    public InputAction continueButton;
+
     void Start()
     {
         doneExplanations = new bool[pointsOfInterest.Length];
         explanations = new string[][] { PlayerExplanations, ArenaExplanations, TrainingCenterExplanations };
         SetTarget(pointsOfInterest[currentPoint].position);
+        continueButton.Enable();
         base.Start();
+    }
+
+    void OnEnable()
+    {
+        continueButton.Enable();
+    }
+
+    void OnDisable()
+    {
+        continueButton.Disable();
     }
 
     void Update()
@@ -44,7 +60,7 @@ public class TutorialNPC : TargetMover
         {
             dialogueText.text = explanation;
             Debug.Log(explanation);
-            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+            yield return new WaitUntil(() => continueButton.triggered);
             yield return new WaitForSeconds(0.2f);
         }
 
