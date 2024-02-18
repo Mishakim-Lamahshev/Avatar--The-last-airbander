@@ -13,7 +13,8 @@
 
 #### Centralized Map Design
 
-- The game's single map is designed to encourage exploration and strategic planning. The central arena serves as a hub for major battles and storyline progression, while the surrounding elemental training centers are strategically placed to offer unique environmental challenges and quests. This layout ensures players engage with all aspects of the game world, promoting a balanced skill development and storytelling experience.
+- The game's single map is designed to encourage exploration and strategic planning. The central arena serves as a hub for major battles and storyline progression, while the surrounding elemental training centers are strategically placed to offer unique environmental challenges and quests.
+- This layout ensures players engage with all aspects of the game world, promoting a balanced skill development and storytelling experience.
 
 ### 3. Engaging Object Interactions
 
