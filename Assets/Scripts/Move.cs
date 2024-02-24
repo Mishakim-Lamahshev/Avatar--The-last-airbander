@@ -3,9 +3,9 @@ using UnityEngine.InputSystem;
 
 public class Move : MonoBehaviour
 {
-    public InputAction moveRight=new InputAction(type: InputActionType.Button);
-    public InputAction moveLeft=new InputAction(type: InputActionType.Button);
-    public InputAction jump=new InputAction(type: InputActionType.Button);
+    public InputAction moveRight = new InputAction(type: InputActionType.Button);
+    public InputAction moveLeft = new InputAction(type: InputActionType.Button);
+    public InputAction jump = new InputAction(type: InputActionType.Button);
     public float moveSpeed = 90f;
 
     void OnEnable()
@@ -30,7 +30,7 @@ public class Move : MonoBehaviour
         // Add listeners for when the input values change
         moveRight.performed += ctx => MovePlayer(new Vector3(1f, 0f, 0f));
         moveLeft.performed += ctx => MovePlayer(new Vector3(-1f, 0f, 0f));
-        jump.performed += ctx => MovePlayer(new Vector3(0f, 7f, 0f));
+        jump.performed += ctx => MovePlayer(new Vector3(0f, 3f, 0f));
     }
 
     void Update()

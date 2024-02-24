@@ -6,26 +6,18 @@ using UnityEngine.InputSystem;
 public class TutorialNPC : TargetMover
 {
     public GameObject player;
-    public Transform[] pointsOfInterest;
-    public string[][] explanations; // An array of string arrays to hold different explanations for each point
+    public PointOfInterest[] pointsOfInterest; // Changed to PointOfInterest array
     public Text dialogueText;
     private bool[] doneExplanations;
     private int currentPoint = 0;
     private bool isExplaining = false;
 
-    public string[] PlayerExplanations;
-    public string[] ArenaExplanations;
-    public string[] TrainingCenterExplanations;
-
-    // Recieve the input key for the player to press to continue the explanation
-    // and the text to display for the explanation
     public InputAction continueButton;
 
     void Start()
     {
         doneExplanations = new bool[pointsOfInterest.Length];
-        explanations = new string[][] { PlayerExplanations, ArenaExplanations, TrainingCenterExplanations };
-        SetTarget(pointsOfInterest[currentPoint].position);
+        SetTarget(pointsOfInterest[currentPoint].transform.position); // Access transform here
         continueButton.Enable();
         base.Start();
     }
@@ -44,9 +36,10 @@ public class TutorialNPC : TargetMover
     {
         for (int i = 0; i < pointsOfInterest.Length; i++)
         {
-            if (!isExplaining && Vector3.Distance(transform.position, pointsOfInterest[i].position) <= 8f && !doneExplanations[i])
+            if (!isExplaining && Vector3.Distance(transform.position, pointsOfInterest[i].transform.position) <= 5f && !doneExplanations[i]) // Access transform here
             {
                 StartCoroutine(ShowPlayerExplanation(i));
+                Debug.Log("Showing explanation for point " + i);
                 break; // Exit the loop to ensure only one explanation starts.
             }
         }
@@ -56,7 +49,7 @@ public class TutorialNPC : TargetMover
     {
         isExplaining = true;
         dialogueText.text = ""; // Clear previous text
-        foreach (var explanation in explanations[pointIndex])
+        foreach (var explanation in pointsOfInterest[pointIndex].explanations) // Access explanations directly
         {
             dialogueText.text = explanation;
             Debug.Log(explanation);
@@ -75,7 +68,7 @@ public class TutorialNPC : TargetMover
         if (currentPoint < pointsOfInterest.Length - 1)
         {
             currentPoint++;
-            SetTarget(pointsOfInterest[currentPoint].position);
+            SetTarget(pointsOfInterest[currentPoint].transform.position); // Access transform here
         }
     }
 }

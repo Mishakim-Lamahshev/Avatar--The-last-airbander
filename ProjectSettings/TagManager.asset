@@ -14,6 +14,12 @@ TagManager:
   - DA
   - Left Border
   - Right Border
+  - Aang
+  - Ozai
+  - Soka
+  - Toph
+  - Appa
+  - Arena
   layers:
   - Default
   - TransparentFX
