@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 563755804}
   - component: {fileID: 563755806}
   - component: {fileID: 563755807}
+  - component: {fileID: 563755808}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Player
@@ -490,7 +491,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
-  LoseScene: LoseScene
 --- !u!114 &563755807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,6 +520,18 @@ MonoBehaviour:
       m_Action: Attack
       m_Flags: 0
     m_Flags: 0
+--- !u!114 &563755808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563755799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cda3bf56232bfe489e94956ac0a080d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &656220052
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,7 +968,7 @@ GameObject:
   - component: {fileID: 1311706185}
   - component: {fileID: 1311706186}
   m_Layer: 0
-  m_Name: EnemyCharacter
+  m_Name: EarthEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1139,7 +1151,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1
-  LoseScene: VictoryScene
 --- !u!1 &1361442476
 GameObject:
   m_ObjectHideFlags: 0

@@ -35,10 +35,8 @@ public class AttackObject : MonoBehaviour
     {
         if (other.tag == player.tag)
         {
-            Debug.Log("IGNORE COLLIDEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
             return;
         }
-        Debug.Log("Attack " + gameObject.tag + " hit with " + other.tag);
         // Check if the collided object has the "Enemy" tag
         if (other.tag == enemy.tag)
         {
@@ -48,7 +46,6 @@ public class AttackObject : MonoBehaviour
 
     void HandleEnemyCollision(GameObject character)
     {
-        Debug.Log(gameObject.tag + " HANDLE WITH " + character.tag);
         // Check if the attack collides with the enemy character
         if (character.gameObject == enemy)
         {

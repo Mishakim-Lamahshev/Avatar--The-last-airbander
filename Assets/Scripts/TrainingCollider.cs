@@ -38,8 +38,15 @@ public class TriggerButtonPopUp : MonoBehaviour
     // Optionally, add an OnTriggerExit2D method to hide the buttons when the objects stop intersecting
     private void OnTriggerExit2D(Collider2D other)
     {
-        txt.text = "";
-        button1.gameObject.SetActive(false);
+        try
+        {
+            txt.text = "";
+            button1.gameObject.SetActive(false);
+        }
+        catch (System.Exception)
+        {
+            Debug.Log("Error- Maybe Switch Scenes?");
+        }
     }
 
 }
