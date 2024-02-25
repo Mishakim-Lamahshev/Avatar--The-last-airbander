@@ -8,42 +8,46 @@ public class LifeManager : MonoBehaviour
     // Call this method whenever the character loses a life
     public void LoseLife()
     {
-        life--;
-
-        // Check if life is zero, then load the lose scene
-        if (life <= 0)
+        // Check if the tutorial is over before updating lives
+        if (TutorialManager.IsTutorialComplete)
         {
-            if (!gameObject.CompareTag("Player"))
+            life--;
+
+            // Check if life is zero, then load the lose scene
+            if (life <= 0)
             {
-                // Call method to update player progress
-                UpdatePlayerProgress();
+                if (!gameObject.CompareTag("Player"))
+                {
+                    // Call method to update player progress
+                    UpdatePlayerProgress();
+                }
+                SceneManager.LoadScene("MainScene");
             }
-            SceneManager.LoadScene("MainScene");
         }
     }
 
     // Method to update player progress
-   private void UpdatePlayerProgress()
-{
-    // Access the playerProgressInstance from the StatsHandle script
-    PlayerProgress playerProgress = StatsHandle.playerProgressInstance;
-    Debug.Log("Session: " + gameObject.name);
-    // Check if the playerProgressInstance is not null
-    if (playerProgress != null)
+    private void UpdatePlayerProgress()
     {
-        if (gameObject.name=="EarthEnemy")
-            playerProgress.EarthTrainingSessionCompleted();
-        else if (gameObject.name=="FireEnemy")
-            playerProgress.FireTrainingSessionCompleted();
-        else if (gameObject.name=="WaterEnemy")
-            playerProgress.WaterTrainingSessionCompleted();
-        else if (gameObject.name=="AirEnemy")
-            playerProgress.AirTrainingSessionCompleted();
+        // Access the playerProgressInstance from the StatsHandle script
+        PlayerProgress playerProgress = StatsHandle.playerProgressInstance;
+        Debug.Log("Session: " + gameObject.name);
+        // Check if the playerProgressInstance is not null
+        if (playerProgress != null)
+        {
+            if (gameObject.name == "EarthEnemy")
+                playerProgress.EarthTrainingSessionCompleted();
+            else if (gameObject.name == "FireEnemy")
+                playerProgress.FireTrainingSessionCompleted();
+            else if (gameObject.name == "WaterEnemy")
+                playerProgress.WaterTrainingSessionCompleted();
+            else if (gameObject.name == "AirEnemy")
+                playerProgress.AirTrainingSessionCompleted();
+        }
+        else
+        {
+            Debug.LogWarning("PlayerProgress instance not found.");
+        }
     }
-    else
-    {
-        Debug.LogWarning("PlayerProgress instance not found.");
-    }
-}
 
 }
