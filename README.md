@@ -11,8 +11,6 @@ Link to formal-elements.md: [formal-elements.md](formal-elements.md)
 
 **Challenge the Shadows:** Assume the role of Aang, the Avatar, as you confront a mysterious and powerful new adversary threatening to plunge the world into darkness. 🌑 Uncover the secrets of the Shadow Clan, mastering bending arts and confronting the looming peril.
 
-**Dynamic Difficulty:** Adapt to the challenges dynamically based on your choices and performance. 🔄 The game intelligently adjusts difficulty, ensuring a challenging yet rewarding experience for players of all skill levels.
-
 **Epic Choices, Consequential Endings:** Navigate a rich narrative with meaningful choices that influence the plot. 🌌 Your decisions shape the fate of the world, leading to various possible endings. Will you triumph over the shadows, or succumb to their influence?
 
 ## Your Odyssey Begins
