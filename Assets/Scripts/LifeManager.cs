@@ -61,6 +61,7 @@ public class LifeManager : MonoBehaviour
             else if (gameObject.name == "FireEnemy") playerProgress.FireTrainingSessionCompleted();
             else if (gameObject.name == "WaterEnemy") playerProgress.WaterTrainingSessionCompleted();
             else if (gameObject.name == "AirEnemy") playerProgress.AirTrainingSessionCompleted();
+            else if (gameObject.name == "ShadowEnemy") playerProgress.ArenaLevelCompleted();
         }
         else
         {

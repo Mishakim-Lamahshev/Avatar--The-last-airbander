@@ -1146,7 +1146,7 @@ GameObject:
   - component: {fileID: 1311706185}
   - component: {fileID: 1311706186}
   m_Layer: 0
-  m_Name: EnemyCharacter
+  m_Name: ShadowEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

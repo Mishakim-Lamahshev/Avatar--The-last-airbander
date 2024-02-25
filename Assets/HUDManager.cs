@@ -14,7 +14,8 @@ public class HUDManager : MonoBehaviour
         if (playerProgress != null)
         {
             // Update the single UI element with all current stats
-            statsText.text = $"Earth Power: {playerProgress.earthPower}\t" +
+            statsText.text = $"Level: {playerProgress.arenaLevel}\t" +
+                             $"Earth Power: {playerProgress.earthPower}\t" +
                              $"Fire Power: {playerProgress.firePower}\t" +
                              $"Water Power: {playerProgress.waterPower}\t" +
                              $"Air Power: {playerProgress.airPower}";
