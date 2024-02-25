@@ -11,18 +11,50 @@ public class OpponentController : MonoBehaviour
     public GameObject playerCharacter;
     public float AttackSpeed = 50f;
     public GameObject AttackController;
+
+    // Difficulty adjustment factors
+    private float difficultyFactor = 1.0f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         pcCharacter = GameObject.FindGameObjectWithTag("Enemy");
-        playerCharacter=GameObject.FindGameObjectWithTag("Player");
+        playerCharacter = GameObject.FindGameObjectWithTag("Player");
+
+        AdjustDifficultyBasedOnPlayerStats();
+
         // Start the repeating action method after a delay
         InvokeRepeating("RandomAction", Random.Range(1f, 3f), attackInterval);
     }
 
+    void AdjustDifficultyBasedOnPlayerStats()
+    {
+        // Access the playerProgressInstance
+        PlayerProgress playerProgress = StatsHandle.playerProgressInstance;
+
+        if (playerProgress != null)
+        {
+            // Example adjustment: Increase move speed based on player's combined power levels
+            int totalPlayerPower = playerProgress.earthPower + playerProgress.firePower + playerProgress.waterPower + playerProgress.airPower;
+
+            // Calculate a difficulty factor based on total player power
+            difficultyFactor = 1.0f + (totalPlayerPower / 10.0f); // Adjust this formula as needed
+
+            // Adjust opponent's attributes based on difficulty factor
+            moveSpeed *= difficultyFactor;
+            jumpForce *= difficultyFactor;
+            attackInterval /= difficultyFactor; // Shorter interval = more difficult
+            AttackSpeed *= difficultyFactor;
+        }
+        else
+        {
+            Debug.LogWarning("PlayerProgress instance not found.");
+        }
+    }
+
     void Update()
     {
-        
+
     }
 
     void RandomAction()
