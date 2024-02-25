@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
@@ -14,8 +15,17 @@ public class TutorialNPC : TargetMover
 
     public InputAction continueButton;
 
+    public static bool tutorialCompleted = false; // Static flag to mark tutorial completion
+
     void Start()
     {
+        // Check if the tutorial has already been completed
+        if (tutorialCompleted)
+        {
+            gameObject.SetActive(false); // Optionally deactivate the NPC if tutorial is done
+            return; // Exit to avoid reinitializing the tutorial
+        }
+
         doneExplanations = new bool[pointsOfInterest.Length];
         SetTarget(pointsOfInterest[currentPoint].transform.position); // Access transform here
         continueButton.Enable();
@@ -24,7 +34,10 @@ public class TutorialNPC : TargetMover
 
     void OnEnable()
     {
-        continueButton.Enable();
+        if (!tutorialCompleted) // Only enable if tutorial hasn't been completed
+        {
+            continueButton.Enable();
+        }
     }
 
     void OnDisable()
@@ -34,6 +47,8 @@ public class TutorialNPC : TargetMover
 
     void Update()
     {
+        if (tutorialCompleted) return; // Skip update logic if tutorial is already completed
+
         for (int i = 0; i < pointsOfInterest.Length; i++)
         {
             if (!isExplaining && Vector3.Distance(transform.position, pointsOfInterest[i].transform.position) <= 5f && !doneExplanations[i]) // Access transform here
@@ -61,6 +76,14 @@ public class TutorialNPC : TargetMover
         isExplaining = false;
         doneExplanations[pointIndex] = true;
         MoveToNextPoint();
+
+        // Check if all explanations are done to mark the tutorial as completed
+        tutorialCompleted = Array.TrueForAll(doneExplanations, done => done);
+        if (tutorialCompleted)
+        {
+            Debug.Log("Tutorial completed!");
+            // Additional actions upon completing the tutorial, if needed
+        }
     }
 
     void MoveToNextPoint()
