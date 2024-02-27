@@ -216,11 +216,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f1857b8ebf91ce468c8efa6ed477605, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explanations:
-  - Welcome to your first air bending training!
-  - Move using the arrows
-  - Press 'A' for an air bending attack
-  - Good luck!
+  explanationSets:
+  - setName: 1
+    explanations:
+    - Welcome to your first air bending training!
+    - Move using the arrows
+    - Bend air to attack your enemy by pressing 'A'
+    - Good luck!
+  - setName: 2
+    explanations:
+    - Welcome to your second air bending training!
+    - Enemys will become harder as you improve your skills
+    - Your bending skill will improve as well and you will be able to bend faster
+    - Good luck!
+  - setName: 3
+    explanations:
+    - Welcome to your third air bending training!
+    - Good luck!
+  - setName: 4
+    explanations:
+    - Welcome to your fourth air bending training!
+    - Good luck!
   displayText: {fileID: 3307794770375611998}
   inputAction:
     m_Name: Input
@@ -239,3 +255,4 @@ MonoBehaviour:
       m_Action: Input
       m_Flags: 0
     m_Flags: 0
+  elementOrLevelName: air

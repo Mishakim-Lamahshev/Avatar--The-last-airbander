@@ -849,12 +849,36 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: elementOrLevelName
+      value: fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
       propertyPath: explanations.Array.data[0]
       value: Welcome to your first fire bending training!
       objectReference: {fileID: 0}
     - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
       propertyPath: explanations.Array.data[2]
       value: Press 'F' for a fire bending attack
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[0].explanations.Array.data[0]
+      value: Welcome to your first fire bending training!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[0].explanations.Array.data[2]
+      value: Bend fire to attack your enemy by pressing 'F'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[1].explanations.Array.data[0]
+      value: Welcome to your second fire bending training!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[2].explanations.Array.data[0]
+      value: Welcome to your third fire bending training!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[3].explanations.Array.data[0]
+      value: Welcome to your fourth fire bending training!
       objectReference: {fileID: 0}
     - target: {fileID: 6682658324858677240, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
       propertyPath: m_Name

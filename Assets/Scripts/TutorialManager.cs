@@ -2,19 +2,27 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem; // Required for the new Input System
 using TMPro; // Include the TextMeshPro namespace
+using System.Collections.Generic; // Required for using List
 
 public class TutorialManager : MonoBehaviour
 {
     [SerializeField]
-    private string[] explanations; // Array of explanations to display
+    private List<ExplanationSet> explanationSets; // List of explanation sets
+
     [SerializeField]
-    private TextMeshPro displayText; // Change to TextMeshProUGUI for UI text
+    private TextMeshPro displayText;
+
     [SerializeField]
     private InputAction inputAction; // Input action for moving to the next explanation
 
+    private string[] currentExplanations; // Current explanations array
     private int currentExplanationIndex = 0; // Tracks the current explanation index
 
     public static bool IsTutorialComplete { get; private set; } // Static flag to indicate tutorial completion
+
+    // Level or element name to set the current explanations
+    [SerializeField]
+    public string elementOrLevelName;
 
     private void OnEnable()
     {
@@ -30,10 +38,23 @@ public class TutorialManager : MonoBehaviour
 
     private void Start()
     {
-        if (explanations.Length > 0)
+        SetCurrentElement(elementOrLevelName);
+    }
+
+    public void SetCurrentElement(string elementOrLevelName)
+    {
+        string levelToShow = StatsHandle.GetCurrentStat(elementOrLevelName).ToString();
+        ExplanationSet set = explanationSets.Find(s => s.setName == levelToShow);
+        if (set != null)
         {
-            IsTutorialComplete = false; // Reset tutorial completion state
+            currentExplanations = set.explanations;
+            currentExplanationIndex = 0; // Reset index
+            IsTutorialComplete = false; // Reset completion flag
             DisplayCurrentExplanation();
+        }
+        else
+        {
+            Debug.LogWarning("Explanation set not found for element or level: " + elementOrLevelName);
         }
     }
 
@@ -44,15 +65,15 @@ public class TutorialManager : MonoBehaviour
 
     private void DisplayCurrentExplanation()
     {
-        if (currentExplanationIndex < explanations.Length)
+        if (currentExplanationIndex < currentExplanations.Length)
         {
-            displayText.text = explanations[currentExplanationIndex];
+            displayText.text = currentExplanations[currentExplanationIndex];
         }
     }
 
     private void MoveToNextExplanation()
     {
-        if (currentExplanationIndex < explanations.Length - 1)
+        if (currentExplanationIndex < currentExplanations.Length - 1)
         {
             currentExplanationIndex++;
             DisplayCurrentExplanation();
@@ -60,7 +81,7 @@ public class TutorialManager : MonoBehaviour
         else
         {
             IsTutorialComplete = true;
-            displayText.enabled = false;
+            displayText.enabled = false; // Hide the display text
         }
     }
 }

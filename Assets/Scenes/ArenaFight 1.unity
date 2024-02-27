@@ -241,12 +241,64 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: elementOrLevelName
+      value: arena
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
       propertyPath: explanations.Array.data[0]
       value: Welcome to your first fight in the arena!
       objectReference: {fileID: 0}
     - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
       propertyPath: explanations.Array.data[2]
       value: Use the attacks you learned in your training sessions
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[0].explanations.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[1].explanations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[0].explanations.Array.data[0]
+      value: Welcome to your first arena fight!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[0].explanations.Array.data[1]
+      value: Here you will defeat enemys from the shadow clan to pass levels
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[0].explanations.Array.data[2]
+      value: Move using the arrows
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[0].explanations.Array.data[3]
+      value: Use all the attacks learned in your training sessions
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[0].explanations.Array.data[4]
+      value: Good luck!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[0].explanations.Array.data[5]
+      value: Good luck!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[1].explanations.Array.data[0]
+      value: Welcome to your second arena fight!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[1].explanations.Array.data[2]
+      value: Good luck!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[2].explanations.Array.data[0]
+      value: Welcome to your third arena fight!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[3].explanations.Array.data[0]
+      value: Welcome to your fourth arena fight!
       objectReference: {fileID: 0}
     - target: {fileID: 6682658324858677240, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
       propertyPath: m_Name
