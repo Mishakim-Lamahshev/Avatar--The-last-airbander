@@ -17,3 +17,7 @@ Link to formal-elements.md: [formal-elements.md](formal-elements.md)
 
 Embark on an odyssey in the world of "Avatar: Shadows Of Harmony" and immerse yourself in an adventure filled with mystery, danger, and the unyielding spirit of the Avatar. 🌈 Face the shadows, restore harmony, and become the beacon of hope the world needs. Are you prepared to face the looming darkness? The elements await your command! 🔥🌪️💧🌿
 
+## Play Now!
+
+Itch Link: [Click Here](https://mishakim-lamahshev.itch.io/avatar-shadows-of-harmony)
+
