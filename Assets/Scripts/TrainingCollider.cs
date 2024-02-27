@@ -6,7 +6,11 @@ public class TriggerButtonPopUp : MonoBehaviour
 {
     public Button button1; // Assign in the inspector
     public Text txt;
-    public string sceneToLoad; // Assign in the inspector
+    public string sceneToLoad; // Assign in the inspector\
+
+    [SerializeField] private string textToDisplay;
+
+
     private void Start()
     {
 
@@ -16,16 +20,7 @@ public class TriggerButtonPopUp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Show the text if tag is "Arena" go to arena else go to training
-        if (other.tag == "Arena")
-        {
-            txt.text = "Go to Arena?";
-        }
-        else
-        {
-            txt.text = "Go to Training?";
-        }
-        // Show the buttons
+        txt.text = textToDisplay;
         button1.gameObject.SetActive(true);
         button1.onClick.AddListener(OnClick);
     }
@@ -45,7 +40,7 @@ public class TriggerButtonPopUp : MonoBehaviour
         }
         catch (System.Exception)
         {
-            Debug.Log("Error- Maybe Switch Scenes?");
+            Debug.Log("Error: Button not found");
         }
     }
 
