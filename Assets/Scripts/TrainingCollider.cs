@@ -6,23 +6,27 @@ public class TriggerButtonPopUp : MonoBehaviour
 {
     public Button button1; // Assign in the inspector
     public Text txt;
-    public string sceneToLoad; // Assign in the inspector\
+    public string sceneToLoad; // Assign in the inspector
 
     [SerializeField] private string textToDisplay;
 
-
     private void Start()
     {
-
         // Hide buttons on start
         button1.gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        txt.text = textToDisplay;
-        button1.gameObject.SetActive(true);
-        button1.onClick.AddListener(OnClick);
+        // Check if the tutorial is completed before showing the button and text
+        if (TutorialNPC.tutorialCompleted)
+        {
+            txt.text = textToDisplay;
+            button1.gameObject.SetActive(true);
+            // Remove all listeners to ensure no duplicates, then add the new listener
+            button1.onClick.RemoveAllListeners();
+            button1.onClick.AddListener(OnClick);
+        }
     }
 
     void OnClick()
@@ -35,13 +39,15 @@ public class TriggerButtonPopUp : MonoBehaviour
     {
         try
         {
-            txt.text = "";
-            button1.gameObject.SetActive(false);
+            if (TutorialNPC.tutorialCompleted) // Only clear text and hide button if tutorial was completed
+            {
+                txt.text = "";
+                button1.gameObject.SetActive(false);
+            }
         }
         catch (System.Exception)
         {
             Debug.Log("Error: Button not found");
         }
     }
-
 }
