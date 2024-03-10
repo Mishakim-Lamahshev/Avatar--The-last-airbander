@@ -452,7 +452,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!60 &563755803
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1023,7 +1023,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!60 &1311706183
 PolygonCollider2D:
   m_ObjectHideFlags: 0
