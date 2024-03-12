@@ -6,6 +6,7 @@ public class TriggerButtonPopUp : MonoBehaviour
 {
     public Button button1; // Assign in the inspector
     public Text txt;
+    public Image DialogBacground;
     public string sceneToLoad; // Assign in the inspector
 
     [SerializeField] private string textToDisplay;
@@ -13,6 +14,7 @@ public class TriggerButtonPopUp : MonoBehaviour
     private void Start()
     {
         // Hide buttons on start
+        DialogBacground.enabled = false;
         button1.gameObject.SetActive(false);
     }
 
@@ -21,6 +23,7 @@ public class TriggerButtonPopUp : MonoBehaviour
         // Check if the tutorial is completed before showing the button and text
         if (TutorialNPC.tutorialCompleted)
         {
+            DialogBacground.enabled = true;
             txt.text = textToDisplay;
             button1.gameObject.SetActive(true);
             // Remove all listeners to ensure no duplicates, then add the new listener
@@ -41,6 +44,7 @@ public class TriggerButtonPopUp : MonoBehaviour
         {
             if (TutorialNPC.tutorialCompleted) // Only clear text and hide button if tutorial was completed
             {
+                DialogBacground.enabled = false;
                 txt.text = "";
                 button1.gameObject.SetActive(false);
             }

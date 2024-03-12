@@ -836,7 +836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeline: {fileID: 1165047664}
-  skipAmountInSeconds: 12
+  skipAmountInSeconds: 15
 --- !u!1 &975185177
 GameObject:
   m_ObjectHideFlags: 0

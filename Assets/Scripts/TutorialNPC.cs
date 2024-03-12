@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class TutorialNPC : TargetMover
 {
     public GameObject player;
+    public Image DialogBacground;
     public PointOfInterest[] pointsOfInterest; // Changed to PointOfInterest array
     public Text dialogueText;
     private bool[] doneExplanations;
@@ -19,6 +20,7 @@ public class TutorialNPC : TargetMover
 
     void Start()
     {
+        DialogBacground.enabled = false;
         // Check if the tutorial has already been completed
         if (tutorialCompleted)
         {
@@ -53,6 +55,7 @@ public class TutorialNPC : TargetMover
         {
             if (!isExplaining && Vector3.Distance(transform.position, pointsOfInterest[i].transform.position) <= 5f && !doneExplanations[i]) // Access transform here
             {
+                DialogBacground.enabled = true;
                 StartCoroutine(ShowPlayerExplanation(i));
                 Debug.Log("Showing explanation for point " + i);
                 break; // Exit the loop to ensure only one explanation starts.
@@ -75,6 +78,7 @@ public class TutorialNPC : TargetMover
         dialogueText.text = ""; // Clear text after explanations
         isExplaining = false;
         doneExplanations[pointIndex] = true;
+        DialogBacground.enabled = false;
         MoveToNextPoint();
 
         // Check if all explanations are done to mark the tutorial as completed
