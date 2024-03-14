@@ -55,12 +55,33 @@ public class AttackObject : MonoBehaviour
                 enemyLifeManager.LoseLife();
             }
 
-            // Make the enemy character glow in red
-            enemyRenderer.color = Color.red;
+            // Determine the color based on the attack object's tag
+            Color colorToChangeTo = DetermineColorBasedOnTag();
+
+            // Make the enemy character glow with the determined color
+            enemyRenderer.color = colorToChangeTo;
+
             // Start the coroutine to restore the original color after 0.2 seconds
             StartCoroutine(RestoreOriginalColorAfterDelay(0.2f));
             // Disable the renderer of the attack object
             gameObject.GetComponent<Renderer>().enabled = false;
+        }
+    }
+
+    Color DetermineColorBasedOnTag()
+    {
+        switch (this.tag) // Using this.tag to get the tag of the attack object
+        {
+            case "FA":
+                return Color.red;
+            case "WA":
+                return Color.blue;
+            case "AA":
+                return Color.white;
+            case "DA":
+                return new Color(0.6f, 0.4f, 0.2f); // A brown color
+            default:
+                return originalColor; // Return the original color if the tag doesn't match
         }
     }
 
