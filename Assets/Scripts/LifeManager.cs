@@ -3,48 +3,46 @@ using UnityEngine.SceneManagement;
 
 public class LifeManager : MonoBehaviour
 {
-    public int life = 3; // Default life count
+    public int hp = 100; // Base hit points
 
     void Start()
     {
-        AdjustLivesBasedOnProgress();
+        AdjustHPBasedOnArenaLevel();
     }
 
-    // Adjust the player's lives based on their progress
-    private void AdjustLivesBasedOnProgress()
+    private void AdjustHPBasedOnArenaLevel()
     {
         PlayerProgress playerProgress = StatsHandle.playerProgressInstance;
 
         if (playerProgress != null)
         {
-            // Add extra life for every 4 total power points
-            int totalPower = playerProgress.earthPower + playerProgress.firePower + playerProgress.waterPower + playerProgress.airPower;
-            int extraLives = totalPower / 4; // For every 4 power points, gain an extra life
+            // Increase HP based on the arena level, adjust this formula as needed
+            hp += playerProgress.arenaLevel * 20; // Example: Increase HP by 20 for each arena level
 
-            life += extraLives;
-
-            Debug.Log("Adjusted lives based on player progress. Total lives: " + life);
+            Debug.Log($"Adjusted HP based on arena level. Total HP: {hp}");
         }
         else
         {
-            Debug.LogWarning("PlayerProgress instance not found. Using default lives.");
+            Debug.LogWarning("PlayerProgress instance not found. Using default HP.");
         }
     }
 
-    // Call this method whenever the character loses a life
-    public void LoseLife()
+    // Modify to take damage parameter
+    public void TakeDamage(int damage)
     {
-        if (TutorialManager.IsTutorialComplete) // Check if the tutorial is over before updating lives
+        if (TutorialManager.IsTutorialComplete) // Ensure the tutorial is completed
         {
-            life--;
+            hp -= damage;
 
-            if (life <= 0) // Check if life is zero, then load the lose scene
+            Debug.Log($"Remaining HP: {hp}");
+
+            if (hp <= 0)
             {
                 if (!gameObject.CompareTag("Player"))
                 {
-                    UpdatePlayerProgress(); // Call method to update player progress
+                    UpdatePlayerProgress(); // Update progress before losing
                 }
-                SceneManager.LoadScene("MainScene");
+                SceneManager.LoadScene("MainScene"); // Load scene when HP reaches 0
             }
         }
     }

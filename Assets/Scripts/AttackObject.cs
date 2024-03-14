@@ -46,25 +46,39 @@ public class AttackObject : MonoBehaviour
 
     void HandleEnemyCollision(GameObject character)
     {
-        // Check if the attack collides with the enemy character
         if (character.gameObject == enemy)
         {
-            // Call LoseLife on the LifeManager script attached to the enemy
+            int damage = CalculateDamageBasedOnElement();
+
             if (enemyLifeManager != null)
             {
-                enemyLifeManager.LoseLife();
+                enemyLifeManager.TakeDamage(damage);
             }
 
-            // Determine the color based on the attack object's tag
             Color colorToChangeTo = DetermineColorBasedOnTag();
-
-            // Make the enemy character glow with the determined color
             enemyRenderer.color = colorToChangeTo;
-
-            // Start the coroutine to restore the original color after 0.2 seconds
             StartCoroutine(RestoreOriginalColorAfterDelay(0.2f));
-            // Disable the renderer of the attack object
             gameObject.GetComponent<Renderer>().enabled = false;
+        }
+    }
+
+    int CalculateDamageBasedOnElement()
+    {
+        PlayerProgress playerProgress = StatsHandle.playerProgressInstance;
+        if (playerProgress == null) return 10; // Default damage if player progress is not available
+
+        switch (this.tag) // Assuming tags are "FA", "WA", "AA", "DA"
+        {
+            case "FA":
+                return playerProgress.firePower * 5; // Example damage calculation
+            case "WA":
+                return playerProgress.waterPower * 5;
+            case "AA":
+                return playerProgress.airPower * 5;
+            case "DA":
+                return playerProgress.earthPower * 5;
+            default:
+                return 10;
         }
     }
 

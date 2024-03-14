@@ -31,6 +31,6 @@ public class UpdateLife : MonoBehaviour
     void Update()
     {
         // Update the text of the TextMeshPro component
-        textMeshPro.text = "Life: " + characterLifeManager.life.ToString();
+        textMeshPro.text = "HP: " + characterLifeManager.hp.ToString();
     }
 }
