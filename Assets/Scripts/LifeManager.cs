@@ -32,17 +32,47 @@ public class LifeManager : MonoBehaviour
     {
         if (TutorialManager.IsTutorialComplete) // Ensure the tutorial is completed
         {
+            string sceneName = SceneManager.GetActiveScene().name;
+            PlayerProgress playerProgress = StatsHandle.playerProgressInstance;
             hp -= damage;
 
             Debug.Log($"Remaining HP: {hp}");
 
             if (hp <= 0)
             {
-                if (!gameObject.CompareTag("Player"))
+                Debug.Log(gameObject.tag+" HP reached 0");
+                if(sceneName=="ArenaFight 1")
                 {
-                    UpdatePlayerProgress(); // Update progress before losing
+                    Debug.Log("ARENA DEATHHHHHHHH");
+                    if(gameObject.CompareTag("Player"))
+                    {
+                        Debug.Log("Player lost - GO TO LOSE SCENE");
+                        SceneManager.LoadScene("LoseScene");
+                    }
+                    if (!gameObject.CompareTag("Player"))
+                    {
+                        Debug.Log("Enemy lost - finished level "+playerProgress.arenaLevel);
+                        UpdatePlayerProgress(); // Update progress before losing
+                        if(playerProgress.arenaLevel>5) // If the enemy is the shadow enemy, load the win scene
+                        {
+                            Debug.Log("Player won - GO TO WIN SCENE");
+                            SceneManager.LoadScene("WinScene");
+                        }
+                        SceneManager.LoadScene("MainScene");
+                    }
+
                 }
-                SceneManager.LoadScene("MainScene"); // Load scene when HP reaches 0
+                else
+                {
+                    Debug.Log("TRAINING DEATHHHHHHHH");
+                    if (!gameObject.CompareTag("Player"))
+                    {
+                        Debug.Log("WIN TRAINING");
+                        UpdatePlayerProgress();
+                    }                    
+                    SceneManager.LoadScene("MainScene"); // Load scene when HP reaches 0
+                }                
+                
             }
         }
     }
