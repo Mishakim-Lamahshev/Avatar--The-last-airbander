@@ -932,7 +932,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
       propertyPath: explanationSets.Array.data[0].explanations.Array.data[0]
-      value: Welcome to your first earth bending training!
+      value: Welcome to your first earth bending training! (Don't worry, nothing
+        will happen until the tutorial is done)
       objectReference: {fileID: 0}
     - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
       propertyPath: explanationSets.Array.data[0].explanations.Array.data[2]
