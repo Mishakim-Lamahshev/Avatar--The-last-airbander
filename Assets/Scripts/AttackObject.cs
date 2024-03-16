@@ -107,9 +107,21 @@ public class AttackObject : MonoBehaviour
 
     IEnumerator ApplyRootEffect(GameObject character, float duration)
     {
-        character.GetComponent<OpponentController>().enabled = false; // Disable movement
+        OpponentController opponentController = character.GetComponent<OpponentController>();
+        // get original values from the opponent controller for moveSpeed and jumpForce
+        float originalMoveSpeed = opponentController.moveSpeed;
+        float originalJumpForce = opponentController.jumpForce;
+
+        // set the moveSpeed and jumpForce to 0
+        opponentController.moveSpeed = 0;
+        opponentController.jumpForce = 0;
+
+        // wait for the duration
         yield return new WaitForSeconds(duration);
-        character.GetComponent<OpponentController>().enabled = true; // Enable movement
+
+        // restore the original moveSpeed and jumpForce
+        opponentController.moveSpeed = originalMoveSpeed;
+        opponentController.jumpForce = originalJumpForce;
     }
 
     void ApplyKnockbackEffect(GameObject character, float force)

@@ -4,10 +4,12 @@ using UnityEngine.SceneManagement;
 public class LifeManager : MonoBehaviour
 {
     public int hp = 100; // Base hit points
+    private bool isAlive = true;
 
     void Start()
     {
         AdjustHPBasedOnArenaLevel();
+        isAlive = true;
     }
 
     private void AdjustHPBasedOnArenaLevel()
@@ -16,8 +18,8 @@ public class LifeManager : MonoBehaviour
 
         if (playerProgress != null)
         {
-            // Increase HP based on the arena level, adjust this formula as needed
-            hp += playerProgress.arenaLevel * 20; // Example: Increase HP by 20 for each arena level
+            // Increase HP based on the arena level
+            hp += playerProgress.arenaLevel * 20;
 
             Debug.Log($"Adjusted HP based on arena level. Total HP: {hp}");
         }
@@ -27,7 +29,6 @@ public class LifeManager : MonoBehaviour
         }
     }
 
-    // Modify to take damage parameter
     public void TakeDamage(int damage)
     {
         if (TutorialManager.IsTutorialComplete) // Ensure the tutorial is completed
@@ -38,25 +39,26 @@ public class LifeManager : MonoBehaviour
 
             Debug.Log($"Remaining HP: {hp}");
 
-            if (hp <= 0)
+            if (hp <= 0 && isAlive)
             {
-                Debug.Log(gameObject.tag+" HP reached 0");
-                if(sceneName=="ArenaFight 1")
+                isAlive = false;
+                Debug.Log(gameObject.tag + " HP reached 0");
+                if (sceneName == "ArenaFight 1")
                 {
                     Debug.Log("ARENA DEATHHHHHHHH");
-                    if(gameObject.CompareTag("Player"))
+                    if (gameObject.CompareTag("Player"))
                     {
                         Debug.Log("Player lost - GO TO LOSE SCENE");
                         SceneManager.LoadScene("LoseScene");
                     }
                     if (!gameObject.CompareTag("Player"))
                     {
-                        Debug.Log("Enemy lost - finished level "+playerProgress.arenaLevel);
+                        Debug.Log("Enemy lost - finished level " + playerProgress.arenaLevel);
                         UpdatePlayerProgress(); // Update progress before losing
-                        if(playerProgress.arenaLevel>5) // If the enemy is the shadow enemy, load the win scene
+                        if (playerProgress.arenaLevel > 5) // If the enemy is the shadow enemy, load the win scene
                         {
                             Debug.Log("Player won - GO TO WIN SCENE");
-                            SceneManager.LoadScene("WinScene");
+                            SceneManager.LoadScene("VictoryScene");
                         }
                         SceneManager.LoadScene("MainScene");
                     }
@@ -69,10 +71,10 @@ public class LifeManager : MonoBehaviour
                     {
                         Debug.Log("WIN TRAINING");
                         UpdatePlayerProgress();
-                    }                    
+                    }
                     SceneManager.LoadScene("MainScene"); // Load scene when HP reaches 0
-                }                
-                
+                }
+
             }
         }
     }

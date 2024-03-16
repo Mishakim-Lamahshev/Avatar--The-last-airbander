@@ -1302,6 +1302,7 @@ GameObject:
   - component: {fileID: 1311706184}
   - component: {fileID: 1311706185}
   - component: {fileID: 1311706186}
+  - component: {fileID: 1311706187}
   m_Layer: 0
   m_Name: ShadowEnemy
   m_TagString: Enemy
@@ -1318,7 +1319,7 @@ Transform:
   m_GameObject: {fileID: 1311706180}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5, y: -2.52, z: 0}
+  m_LocalPosition: {x: 5.28, y: -1.74, z: 0}
   m_LocalScale: {x: 0.93813, y: 0.93813, z: 0.93813}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1387,8 +1388,8 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.2, y: 3.75}
-    newSize: {x: 2.56, y: 2.56}
+    oldSize: {x: 5, y: 5}
+    newSize: {x: 5, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1397,8 +1398,8 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 0, y: 1}
       - {x: -0.95105654, y: 0.30901697}
-      - {x: -0.5877852, y: -0.80901706}
-      - {x: 0.58778536, y: -0.80901694}
+      - {x: -0.9899558, y: -1.6133567}
+      - {x: 1.4189361, y: -1.6133568}
       - {x: 0.9510565, y: 0.30901712}
   m_UseDelaunayMesh: 0
 --- !u!212 &1311706184
@@ -1442,12 +1443,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fec6a442ef5b0d34bb6ff7f774e1f5d7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 85401e942bd3e094c84d355a707b3567, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 5, y: 5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1486,6 +1487,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
+--- !u!114 &1311706187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311706180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f283e22fb5f130f4a8eed5fba1cd6526, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opponentSprites:
+  - {fileID: 21300000, guid: 85401e942bd3e094c84d355a707b3567, type: 3}
+  - {fileID: 21300000, guid: d97e3959e23b1fc448d7f173f3e355b3, type: 3}
+  - {fileID: 21300000, guid: 8d46af9f6dee6284082bd52f9c4bdd7b, type: 3}
+  - {fileID: 21300000, guid: 4f3f2b0d2aa931a43b6851753ccd478d, type: 3}
+  - {fileID: 21300000, guid: bd4ce67924cffa24eb6e265e19529bc0, type: 3}
 --- !u!1 &1361442476
 GameObject:
   m_ObjectHideFlags: 0
