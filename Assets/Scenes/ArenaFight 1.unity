@@ -192,6 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 563755799}
   enemy: {fileID: 1311706180}
+  burnDamage: 1
 --- !u!1 &208308179
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,12 +323,20 @@ PrefabInstance:
       value: arena
       objectReference: {fileID: 0}
     - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
       propertyPath: explanations.Array.data[0]
       value: Welcome to your first fight in the arena!
       objectReference: {fileID: 0}
     - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
       propertyPath: explanations.Array.data[2]
       value: Use the attacks you learned in your training sessions
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[4].setName
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
       propertyPath: explanationSets.Array.data[0].explanations.Array.size
@@ -338,8 +347,13 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[4].explanations.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
       propertyPath: explanationSets.Array.data[0].explanations.Array.data[0]
-      value: Welcome to your first arena fight!
+      value: Welcome to your first arena fight! (Don't worry, nothing will happen
+        until the tutorial is done)
       objectReference: {fileID: 0}
     - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
       propertyPath: explanationSets.Array.data[0].explanations.Array.data[1]
@@ -376,6 +390,18 @@ PrefabInstance:
     - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
       propertyPath: explanationSets.Array.data[3].explanations.Array.data[0]
       value: Welcome to your fourth arena fight!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[4].explanations.Array.data[0]
+      value: Welcome to your fifth and last arena fight!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[4].explanations.Array.data[1]
+      value: Defeat this level to defeat the shadow clan!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[4].explanations.Array.data[2]
+      value: Good luck!
       objectReference: {fileID: 0}
     - target: {fileID: 6682658324858677240, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
       propertyPath: m_Name
@@ -1261,6 +1287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 563755799}
   enemy: {fileID: 1311706180}
+  burnDamage: 1
 --- !u!1 &1311706180
 GameObject:
   m_ObjectHideFlags: 0
@@ -1713,6 +1740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 563755799}
   enemy: {fileID: 1311706180}
+  burnDamage: 1
 --- !u!1 &1823997504 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5018530567998767137, guid: 23476e9c2a224124c9d844ceeead8bba, type: 3}
@@ -1782,6 +1810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 563755799}
   enemy: {fileID: 1311706180}
+  burnDamage: 1
 --- !u!1 &1881499231
 GameObject:
   m_ObjectHideFlags: 0

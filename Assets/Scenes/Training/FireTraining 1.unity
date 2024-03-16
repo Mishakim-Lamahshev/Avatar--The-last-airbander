@@ -862,6 +862,10 @@ PrefabInstance:
       value: Press 'F' for a fire bending attack
       objectReference: {fileID: 0}
     - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[0].explanations.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
       propertyPath: explanationSets.Array.data[0].explanations.Array.data[0]
       value: Welcome to your first fire bending training! (Don't worry, nothing will
         happen until the tutorial is done)
@@ -869,6 +873,14 @@ PrefabInstance:
     - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
       propertyPath: explanationSets.Array.data[0].explanations.Array.data[2]
       value: Bend fire to attack your enemy by pressing 'F'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[0].explanations.Array.data[3]
+      value: A fire attack will set your enemy on fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
+      propertyPath: explanationSets.Array.data[0].explanations.Array.data[4]
+      value: Good luck!
       objectReference: {fileID: 0}
     - target: {fileID: 6448667989973271662, guid: 4b472632b9775594892f0f59af5c68e2, type: 3}
       propertyPath: explanationSets.Array.data[1].explanations.Array.data[0]
@@ -1124,6 +1136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 563755799}
   enemy: {fileID: 1311706180}
+  burnDamage: 1
 --- !u!1 &1311706180
 GameObject:
   m_ObjectHideFlags: 0

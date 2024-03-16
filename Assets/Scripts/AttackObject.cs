@@ -5,6 +5,9 @@ public class AttackObject : MonoBehaviour
 {
     public GameObject player;
     public GameObject enemy;
+
+    public int burnDamage = 1;
+
     private SpriteRenderer enemyRenderer;
     private Color originalColor;
 
@@ -49,18 +52,79 @@ public class AttackObject : MonoBehaviour
         if (character.gameObject == enemy)
         {
             int damage = CalculateDamageBasedOnElement();
-
             if (enemyLifeManager != null)
             {
                 enemyLifeManager.TakeDamage(damage);
             }
 
+            // Determine and apply elemental effect
+            ApplyElementalEffect(character);
+
+            // Existing color change logic
             Color colorToChangeTo = DetermineColorBasedOnTag();
             enemyRenderer.color = colorToChangeTo;
-            StartCoroutine(RestoreOriginalColorAfterDelay(0.2f));
+            StartCoroutine(RestoreOriginalColorAfterDelay(5f));
             gameObject.GetComponent<Renderer>().enabled = false;
         }
     }
+
+    void ApplyElementalEffect(GameObject character)
+    {
+        switch (this.tag)
+        {
+            case "FA":
+                StartCoroutine(ApplyBurningEffect(character, duration: 5f));
+                break;
+            case "WA":
+                StartCoroutine(ApplySlowingEffect(character, duration: 5f));
+                break;
+            case "DA":
+                StartCoroutine(ApplyRootEffect(character, duration: 5f));
+                break;
+            case "AA":
+                ApplyKnockbackEffect(character, force: 5f);
+                break;
+        }
+    }
+
+    IEnumerator ApplyBurningEffect(GameObject character, float duration)
+    {
+        float endTime = Time.time + duration;
+        while (Time.time < endTime)
+        {
+            enemyLifeManager.TakeDamage(burnDamage);
+            yield return new WaitForSeconds(1f); // Damage every second
+        }
+    }
+
+    IEnumerator ApplySlowingEffect(GameObject character, float duration)
+    {
+        float originalSpeed = character.GetComponent<OpponentController>().moveSpeed;
+        character.GetComponent<OpponentController>().moveSpeed /= 2; // Reduce speed by half
+        yield return new WaitForSeconds(duration);
+        character.GetComponent<OpponentController>().moveSpeed = originalSpeed; // Restore original speed
+    }
+
+    IEnumerator ApplyRootEffect(GameObject character, float duration)
+    {
+        character.GetComponent<OpponentController>().enabled = false; // Disable movement
+        yield return new WaitForSeconds(duration);
+        character.GetComponent<OpponentController>().enabled = true; // Enable movement
+    }
+
+    void ApplyKnockbackEffect(GameObject character, float force)
+    {
+        Rigidbody2D rb = character.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.AddForce(new Vector2(force, 0f), ForceMode2D.Impulse);
+        }
+        else
+        {
+            Debug.LogError("Character is missing Rigidbody2D component");
+        }
+    }
+
 
     int CalculateDamageBasedOnElement()
     {
